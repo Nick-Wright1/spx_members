@@ -13,6 +13,8 @@ available_names = df['Asset Name'].unique()
 available_names.sort()
 
 app = dash.Dash()
+server = app.server
+
 app.layout = html.Div([
     html.H1(children='Weight of the Company in S&P500 Index over time', style={'textAlign': 'center'}),
     dcc.Dropdown(
